@@ -1,0 +1,9 @@
+{
+  "welcomeMsg": "Are you Good to Go?",
+  "loginPrompt": "You’ve purchased your tour, but we need more details before you take off. Log in here to manage all your pre-departure info. You can begin as soon as your first booking has been confirmed.",
+  "date": "day",
+  "month": "month",
+  "year": "year",
+  "nationality": "nationality",
+  "login_button": "Login"
+}

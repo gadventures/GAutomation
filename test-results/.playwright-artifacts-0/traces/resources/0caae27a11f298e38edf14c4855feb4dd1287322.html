@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoodToGo Login</title>
+    
+    <link href="/static/g2g/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Karla|Playfair+Display:bold,bolditalic"
+          rel="stylesheet">
+    <script src="/static/js/translations.js" defer></script>
+
+</head>
+<body>
+   <div class="main-content">
+    <div id="login-container" class="container">
+        <div class="svg-container">
+            <img src="/static/g2g/goodtogo.svg" alt="Good to Go Logo">
+        </div>
+        <div class="welcome-text">Jonathan Byford</div>
+         <div class="subtext">
+        <strong  data-translate="welcomeMsg">Are you Good to Go?</strong>
+        <p data-translate="loginPrompt">
+            You’ve purchased your tour, but we need more details before you take off. Log in here to manage all your pre-departure info. You can begin as soon as your first booking has been confirmed.
+        </p>
+             
+        </div>
+
+
+        <form method="post" action="/g2g/login/" id="login-form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="iEiUWbX1ONEjPPqtu8JIqaBkhEwqRvsto7eIjJkmyq0Hyq6k7HYnZgSGQCyPGnJC">
+
+            <div class="date-of-birth-group">
+                <!-- Month -->
+                <div class="form-group month">
+                    <label for="month" data-translate="month">Month:</label>
+                    <select name="month" id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+                    </select>
+                </div>
+                <!-- Day -->
+                <div class="form-group day">
+                    <label for="day" data-translate="date">Day:</label>
+                    <input type="text" name="day" id="day">
+                </div>
+                <!-- Year -->
+                <div class="form-group year">
+                    <label for="year" data-translate="year">Year:</label>
+                    <input type="text" name="year" id="year">
+                </div>
+            </div>
+
+            <!-- Date Validation Message -->
+            <div id="date-validation-message" style="display: none;">
+                <div class="validation-icon">
+                    <span>!</span>
+                </div>
+                <p class="validation-text">This is not a valid date</p>
+            </div>
+
+            <!-- Nationality -->
+            <div class="form-group nationality">
+                       <label for="nationality" data-translate="nationality">Nationality:</label>
+            <select name="nationality" id="nationality">
+                <!-- Add more nationality options here -->
+                <option value="American">American</option>
+                <!-- Example additional options -->
+                <option value="CA">Canadian</option>
+                <option value="BRITISH">British</option>
+                <option value="GERMAN">German</option>
+                <option value="Beninese">Beninese</option>
+                <!-- etc. -->
+            </select>
+
+            </div>
+
+            <!-- Login Button -->
+            <div class="login-button-container">
+                <button type="submit" data-translate="login_button" id="login-button" disabled>Login</button>
+            </div>
+        </form>
+    </div>
+   </div>
+<footer>
+    <div class="language-switcher">
+        <img   src="/static/g2g/british_flag.svg" alt="British Flag" class="language-flag">
+        <img src="/static/g2g/german_flag.svg" alt="German Flag" class="language-flag">
+        <select id="language-select">
+            <option value="en" selected>English</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+    <p> v0.0.1-development</p>
+</footer>
+
+
+
+    <script src="/static/js/login.js"></script>
+    <script src="/static/js/validate_date.js"></script>
+
+</body>
+</html>
