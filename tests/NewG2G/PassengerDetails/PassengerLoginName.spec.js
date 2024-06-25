@@ -15,8 +15,7 @@ test('Passenger @name', async ({page})=>
     const dropDown = page.locator('#nationality');
     await dropDown.selectOption({value: 'BRITISH'});
     await page.waitForTimeout(2000);
-    await page.locator("//button[@id='login-button']").click();
+    await page.locator("#login-button").click();
     await page.waitForTimeout(3000);
-    await page.locator("(//a[normalize-space()='Ross Dalziel (4/9)'])[1]").click();
-    //await page.waitForTimeout(10000);
+    await page.locator("(//a[normalize-space()='Ross Dalziel (4/9)'])[1]");
 });

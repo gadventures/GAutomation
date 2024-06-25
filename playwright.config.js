@@ -3,14 +3,14 @@ const { devices } = require('@playwright/test');
 
 const config = {
   testDir: './tests',
-  retries :1,
+  retries :0,
   workers: 3,
   /* Maximum time one test can run for. */
   //10-
-  timeout: 30000 * 1000,
+  timeout: 3000 * 10000,
   expect: {
   
-    timeout: 5000000
+    timeout: 500000
   },
   
   reporter: 'html',

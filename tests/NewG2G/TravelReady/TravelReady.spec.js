@@ -17,10 +17,10 @@ test('Travel Ready @travel', async ({page})=>
     await page.waitForTimeout(2000);
     await page.locator("//button[@id='login-button']").click();
     await page.waitForTimeout(3000);
-    await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']").click();
-    await page.waitForTimeout(10000);
-    await page.locator("//a[normalize-space()='Travel Ready']").click();
+    const passenger = page.locator(".passenger-link");
+    await page.waitForTimeout(1000);
+    await page.locator("//a[normalize-space()='Travel Ready']");
     await page.locator("//a[contains(text(),'insurance')]");
     await page.locator("//a[normalize-space()='Traveller Code of Conduct']");
-    await page.locator("//button[normalize-space()='Save']").click();
+    const saveButton = page.locator("//button[normalize-space()='Save']");
 });

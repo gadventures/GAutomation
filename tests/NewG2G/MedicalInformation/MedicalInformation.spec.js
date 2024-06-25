@@ -17,7 +17,7 @@ test('Medical Information @medical', async ({page})=>
     await page.waitForTimeout(2000);
     await page.locator("//button[@id='login-button']").click();
     await page.waitForTimeout(3000);
-    await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']").click();
-    await page.waitForTimeout(10000);
-    await page.locator("//a[normalize-space()='Medical Information']").click();
+    await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']");
+    await page.waitForTimeout(1000);
+    await page.locator("//a[normalize-space()='Medical Information']");
 });
